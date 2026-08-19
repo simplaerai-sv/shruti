@@ -1,0 +1,38 @@
+name: Проблема або ідея
+description: Щось не працює, або є пропозиція
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Дякуємо! Три поля нижче — це майже все, що потрібно, щоб розібратись.
+        **Не вставляйте сюди свій API-ключ** і фрагменти робочих розмов.
+
+  - type: dropdown
+    id: os
+    attributes:
+      label: Система
+      options:
+        - Windows
+        - macOS (Apple Silicon)
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Версія застосунку
+      description: Видно внизу ліворуч, наприклад 0.5.010
+      placeholder: "0.5.010"
+    validations:
+      required: true
+
+  - type: textarea
+    id: what
+    attributes:
+      label: Що сталось
+      description: |
+        Що робили, що очікували побачити і що побачили насправді.
+        Якщо це пропозиція — просто опишіть її своїми словами.
+    validations:
+      required: true
