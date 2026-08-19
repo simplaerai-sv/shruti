@@ -1,17 +1,20 @@
-name: Проблема або ідея
-description: Щось не працює, або є пропозиція
+name: Problem or idea
+description: Something is broken, or you have a suggestion
 labels: []
 body:
   - type: markdown
     attributes:
       value: |
-        Дякуємо! Три поля нижче — це майже все, що потрібно, щоб розібратись.
-        **Не вставляйте сюди свій API-ключ** і фрагменти робочих розмов.
+        Thanks! The three fields below are almost everything we need to work it out.
+        **Do not paste your API key here**, and please leave out fragments of your
+        work conversations.
+
+        Українською писати теж можна.
 
   - type: dropdown
     id: os
     attributes:
-      label: Система
+      label: System
       options:
         - Windows
         - macOS (Apple Silicon)
@@ -21,18 +24,18 @@ body:
   - type: input
     id: version
     attributes:
-      label: Версія застосунку
-      description: Видно внизу ліворуч, наприклад 0.5.010
-      placeholder: "0.5.010"
+      label: App version
+      description: Shown in the bottom left corner, for example 0.5.017
+      placeholder: "0.5.017"
     validations:
       required: true
 
   - type: textarea
     id: what
     attributes:
-      label: Що сталось
+      label: What happened
       description: |
-        Що робили, що очікували побачити і що побачили насправді.
-        Якщо це пропозиція — просто опишіть її своїми словами.
+        What you did, what you expected to see and what you saw instead.
+        If this is a suggestion — just describe it in your own words.
     validations:
       required: true

@@ -1,253 +1,258 @@
-**Українська** · [English](README.en.md)
+**English** · [Українська](README.uk.md)
 
 # Shruti AI
 
-**Запис і транскрипція робочих зустрічей** — Slack huddles, Google Meet, Zoom,
-телефонні дзвінки. Для Windows і macOS.
+**Record and transcribe work meetings** — Slack huddles, Google Meet, Zoom,
+phone calls. For Windows and macOS.
 
-Застосунок пише **два окремі канали**: ваш мікрофон і звук з комп’ютера
-(співрозмовники). Тому в транскрипті видно, хто що казав. Записи, транскрипти
-й ключі залишаються **на вашому комп’ютері** — жодного нашого сервера немає.
+The app records **two separate channels**: your microphone and the audio from
+your computer (the other participants). That is why the transcript shows who
+said what. Recordings, transcripts and keys stay **on your computer** — there
+is no server of ours involved.
 
-> ⬇️ **[Завантажити останню версію](../../releases/latest)**
+> ⬇️ **[Download the latest version](../../releases/latest)**
 
 ---
 
-## Що вміє
+## What it does
 
-- 🌐 **Інтерфейс трьома мовами** — англійська, українська, російська. Мова
-  береться з вашої системи, змінюється в налаштуваннях будь-коли.
-- 🎙 **Запис мітингу** — мікрофон + системний звук окремими каналами.
-- 🔇 **Вимкнення мікрофона на рівні системи** — одна кнопка глушить його і
-  для Slack, і для запису. Кнопка живе у шапці й доступна завжди, тож окрему
-  утиліту тримати не треба, а фонові розмови не потрапляють у розшифровку.
-  Обидві кнопки діють на **один мікрофон, обраний на весь застосунок** —
-  типово це мікрофон системи.
-- ⏸ **Пауза запису** і **плаваюча панель** поверх усіх вікон — видно рівні
-  звуку, поряд пауза й мікрофон, фокус у Slack не забирає.
-- 🔊 **Утримання гучності мікрофона** — Slack і Telegram занижують вхідний
-  рівень і назад не піднімають; застосунок повертає його сам. Працює **завжди**,
-  а не лише під час запису: на дзвінках і голосових нотатках рівень теж
-  лишається високим.
-- ⚡ **Жива транскрипція** — текст з’являється прямо під час розмови
-  (потрібен ключ OpenAI; вмикається в налаштуваннях, типово вимкнена).
-- 📝 **Якісний транскрипт після запису** («Re-transcribe») — з поділом на
-  спікерів; довгі файли автоматично ріжуться на частини.
-- 🧠 **Конспект зустрічі** — TL;DR, учасники, теми, домовленості, задачі.
-- 🌍 **Двомовні розмови** — пише мовою оригіналу (укр + рос + англомовні
-  терміни), без перекладу.
-- 📁 **Локальні файли** — кожен запис це тека з аудіо та `.md`-транскриптами.
-- 📥 **Імпорт готових аудіофайлів** — можна транскрибувати те, що записали
-  іншим інструментом.
+- 🌐 **Interface in three languages** — English, Ukrainian, Russian. The
+  language follows your system and can be changed in settings at any time.
+- 🎙 **Meeting recording** — microphone and system audio as separate channels.
+- 🔇 **System-level microphone mute** — one button silences it both for Slack
+  and for the recording. The button lives in the header and is available at any
+  time, so there is no separate utility to keep around and background
+  conversations never reach the transcript. Both buttons act on **one microphone
+  chosen for the whole app** — by default the system one.
+- ⏸ **Pause** and a **floating panel** on top of other windows — audio levels
+  are visible, pause and microphone are right there, and it does not steal
+  focus from Slack.
+- 🔊 **Microphone level keeper** — Slack and Telegram lower your input gain and
+  never raise it back; the app restores it. It works **always**, not only while
+  recording, so calls and voice notes keep a high level too.
+- ⚡ **Live transcription** — text appears while you are talking (needs an
+  OpenAI key; enabled in settings, off by default).
+- 📝 **High-quality transcript after recording** — split by speakers; long
+  files are automatically chunked.
+- 🧠 **Meeting summary** — TL;DR, participants, topics, agreements, tasks.
+- 🌍 **Bilingual conversations** — written in the original language, with no
+  translation; English terms stay English.
+- 📁 **Local files** — each recording is a folder with audio and `.md`
+  transcripts.
+- 📥 **Import existing audio** — transcribe what you recorded elsewhere.
 
-## Як це виглядає
+## What it looks like
 
-<img src="docs/01-main-window.png" alt="Головне вікно" width="100%">
+<img src="docs/01-main-window.png" alt="Main window" width="100%">
 
-Головне вікно. Кнопки мікрофона в шапці — утримання рівня і вимкнення —
-доступні **завжди**, не лише під час запису.
+The main window. The microphone buttons in the header — level keeping and mute —
+are available **at any time**, not only while recording.
 
-<img src="docs/05-new-recording.png" alt="Підготовка запису" width="100%">
+<img src="docs/05-new-recording.png" alt="New recording" width="100%">
 
-Підготовка запису: мікрофон і звук комп'ютера окремими каналами, рівні видно
-ще до старту.
+Setting up a recording: microphone and computer audio as separate channels,
+with levels visible before you start.
 
-<img src="docs/07-recording.png" alt="Запис іде" width="100%">
+<img src="docs/07-recording.png" alt="Recording in progress" width="100%">
 
-Під час запису видно рівень обох каналів окремо: «Я» і «Співрозмовник».
+While recording you see both channels separately: “Me” and “Other person”.
 
-<img src="docs/08-floating-panel.png" alt="Плаваюча панель" width="420">
+<img src="docs/08-floating-panel.png" alt="Floating panel" width="420">
 
-Плаваюча панель поверх усіх вікон: рівні, пауза, мікрофон. Фокус у Slack не
-забирає.
+The floating panel on top of other windows: levels, pause, microphone. It does
+not steal focus from Slack.
 
-<img src="docs/09-playback.png" alt="Прослуховування" width="100%">
+<img src="docs/09-playback.png" alt="Playback" width="100%">
 
-Готовий запис: програвач, розшифровка й конспект. «Стерео» перемикається в
-моно — зручно, якщо слухаєте одним навушником.
+A finished recording: player, transcript and summary. “Stereo” switches to mono —
+handy if you listen with a single earbud.
 
 <details>
-<summary><b>Решта екранів</b></summary>
+<summary><b>The rest of the screens</b></summary>
 
-<img src="docs/03-settings.png" alt="Налаштування" width="100%">
+<img src="docs/03-settings.png" alt="Settings" width="100%">
 
-Налаштування: ключі, модель, мова транскрипції, якість аудіо.
+Settings: keys, model, transcription language, audio quality.
 
-<img src="docs/04-settings-microphone.png" alt="Налаштування мікрофона" width="100%">
+<img src="docs/04-settings-microphone.png" alt="Microphone settings" width="100%">
 
-Вибір мікрофона один на весь застосунок, цільовий рівень і гаряча клавіша.
+One microphone choice for the whole app, the target level and the hotkey.
 
-<img src="docs/06-dictionaries.png" alt="Словники" width="100%">
+<img src="docs/06-dictionaries.png" alt="Dictionaries" width="100%">
 
-Словники: список термінів, які модель часто перекручує, з варіантами написання.
+Dictionaries: terms the model tends to garble, with their spelling variants.
 
-<img src="docs/10-import.png" alt="Імпорт файлу" width="100%">
+<img src="docs/10-import.png" alt="Import a file" width="100%">
 
-Імпорт готового аудіо — можна розшифрувати те, що записали іншим інструментом.
+Importing existing audio — transcribe what you recorded with another tool.
 
-<img src="docs/02-help.png" alt="Довідка" width="100%">
+<img src="docs/02-help.png" alt="Help" width="100%">
 
-Вбудована довідка: ключі, запис, дозволи, файли.
+Built-in help: keys, recording, permissions, files.
 
-<img src="docs/11-dark-theme.png" alt="Темна тема" width="100%">
+<img src="docs/11-dark-theme.png" alt="Dark theme" width="100%">
 
-Темна тема.
+Dark theme.
 
 </details>
 
-## Встановлення
+## Installation
 
 ### Windows
 
-1. Завантажте `ShrutiAI-<версія>-portable.exe` зі
-   [сторінки релізів](../../releases/latest).
-2. Запустіть. Windows покаже синє вікно **«Windows protected your PC»** — це
-   нормально для програм без платного сертифіката підпису.
-   Натисніть **More info → Run anyway**.
-3. Програма портативна: встановлення й прав адміністратора не потребує.
-   Записи зберігаються в теці `data` поруч із файлом програми — перенесете
-   папку, перенесуться і всі записи.
+1. Download `ShrutiAI-<version>-portable.exe` from the
+   [releases page](../../releases/latest).
+2. Run it. Windows shows a blue **“Windows protected your PC”** window — this
+   is normal for apps without a paid signing certificate.
+   Click **More info → Run anyway**.
+3. The app is portable: no installation, no administrator rights. Recordings
+   are kept in a `data` folder next to the executable — move the folder and
+   all recordings move with it.
 
 ### macOS (Apple Silicon)
 
-Застосунок підписаний власним сертифікатом, а не купленим в Apple, тому перший
-запуск macOS блокує. Це нормально і робиться один раз.
+The app is signed with our own certificate rather than one bought from Apple,
+so macOS blocks the first launch. This is normal and happens once.
 
-1. Завантажте `ShrutiAI-<версія>-arm64.dmg`, відкрийте і перетягніть застосунок
-   у **Програми**.
-2. Запустіть його з **Програм**. З’явиться вікно: «Shruti AI не відкрито, Apple
-   не може підтвердити, що застосунок не містить зловмисного ПЗ».
-   Натисніть **«Готово»**. ⚠️ **Не натискайте «Перемістити в Смітник»** — це
-   видалить застосунок.
-3. Відкрийте **Системні параметри → Приватність і безпека**, прокрутіть униз до
-   розділу **«Безпека»**. Там буде рядок про заблокований Shruti AI і кнопка
-   **«Відкрити попри це»** — натисніть її та підтвердьте Touch ID або паролем.
-4. Застосунок запуститься. Далі відкривається як звичайна програма.
+1. Download `ShrutiAI-<version>-arm64.dmg`, open it and drag the app into
+   **Applications**.
+2. Launch it from **Applications**. A window appears: “Shruti AI was not
+   opened, Apple could not verify that it is free of malware”.
+   Click **“Done”**. ⚠️ **Do not click “Move to Trash”** — that deletes the app.
+3. Open **System Settings → Privacy & Security**, scroll down to the
+   **Security** section. There will be a line about Shruti AI being blocked
+   and an **“Open Anyway”** button — click it and confirm with Touch ID or
+   your password.
+4. The app starts. From now on it opens like any other program.
 
-> Старий спосіб «правий клік → Відкрити» на сучасних macOS **більше не працює**:
-> у вікні блокування такої кнопки немає взагалі.
+> The old “right-click → Open” trick **no longer works** on modern macOS:
+> that button is simply not present in the blocking dialog.
 
-5. Щоб записувати звук зустрічі, дайте ще один дозвіл:
-   **Системні параметри → Приватність і безпека → Запис екрана та системного
-   звуку** → увімкніть **Shruti AI** → **перезапустіть застосунок**.
-   Без цього запишеться лише ваш мікрофон, а співрозмовників чути не буде.
-6. Записи зберігаються в `Documents/ShrutiAI`.
+5. To record meeting audio, grant one more permission:
+   **System Settings → Privacy & Security → Screen & System Audio Recording**
+   → enable **Shruti AI** → **restart the app**.
+   Without it only your own microphone is recorded and the other participants
+   will not be heard.
+6. Recordings are kept in `Documents/ShrutiAI`.
 
-## Перший запуск: потрібен API-ключ
+## First run: you need an API key
 
-Застосунок не транскрибує сам — він надсилає аудіо у вибраний вами сервіс.
-Потрібен **один** ключ на вибір:
+The app does not transcribe by itself — it sends audio to the service you
+choose. **One** key is enough:
 
-| Сервіс | Вартість | Що дає |
+| Service | Cost | What you get |
 |---|---|---|
-| **[Google AI Studio](https://aistudio.google.com/apikey)** | **є безкоштовний ліміт** — вистачає на кілька зустрічей на день | Найкраще для довгих записів і двомовних розмов |
-| **[OpenAI](https://platform.openai.com/api-keys)** | платний, потрібна картка | Жива транскрипція під час запису |
+| **[Google AI Studio](https://aistudio.google.com/apikey)** | **has a free tier** — enough for a few meetings a day | Best for long recordings and bilingual conversations |
+| **[OpenAI](https://platform.openai.com/api-keys)** | paid, requires a card | Live transcription while recording |
 
-Ключ вставляється в **Налаштування** (шестерня вгорі праворуч) і зберігається
-лише на вашому комп’ютері.
+The key goes into **Settings** (the gear in the top right) and stays only on
+your computer.
 
-Не знаєте, з чого почати — беріть Google AI Studio.
+Not sure where to start — take Google AI Studio.
 
-## Як записати зустріч
+## How to record a meeting
 
-1. **Новий запис** → оберіть мікрофон і системний звук.
-2. Проведіть зустріч. Можна згорнути застосунок.
-3. **Стоп** → запис з’явиться у списку ліворуч.
-4. **Re-transcribe** — отримати якісний транскрипт з поділом на спікерів.
-5. **Згенерувати конспект** — стислий підсумок із задачами.
+1. **New recording** → pick a microphone and system audio.
+2. Hold your meeting. The app can be minimised.
+3. **Stop** → the recording appears in the list on the left.
+4. **Transcribe** — get a quality transcript split by speakers.
+5. **Generate summary** — a short recap with action items.
 
-💡 Під час прослуховування кнопка **«Моно»** зводить обидва канали в один —
-зручно, якщо слухаєте одним навушником.
+💡 During playback the **“Mono”** button mixes both channels into one — handy
+if you listen with a single earbud.
 
-💡 Кнопка **«mic»** у шапці вимикає мікрофон **у самій системі** — вас
-перестають чути і в Slack, і на записі. Можна призначити гарячу клавішу
-в Налаштуваннях, щоб не перемикатись у вікно застосунку.
+💡 The **“mic”** button in the header mutes your microphone **at the system
+level** — Slack and the recording both stop hearing you. You can assign a
+hotkey in Settings so you never have to switch to the app window.
 
-⚠️ **Тримайте один мікрофон скрізь.** У списку мікрофонів оберіть пункт із
-позначкою **«Default»**, і той самий мікрофон поставте головним у системі та
-у Slack (Meet, Zoom). Кнопка «mic» вимикає саме той мікрофон, який обраний
-у Shruti: якщо у Slack стоїть інший, вас там продовжать чути, хоч у записі
-буде тиша.
+⚠️ **Keep one microphone everywhere.** In the microphone list pick the entry
+marked **“Default”**, and set the same microphone as the main one in your
+system and in Slack (Meet, Zoom). The “mic” button mutes exactly the
+microphone selected in Shruti: if Slack uses a different one, they will still
+hear you there while the recording is silent.
 
-## Двомовні зустрічі
+## Bilingual meetings
 
-За замовчуванням стоїть **«Оригінал (авто)»**: транскрипт пишеться тією мовою,
-якою реально говорять, і англомовні терміни лишаються англійськими. Це те, що
-потрібно для змішаних українсько-російських розмов.
+The default is **“Original (auto)”**: the transcript is written in the
+language people actually speak, and English terms stay in English. That is
+what mixed conversations need.
 
-Якщо розмова двомовна — найточніший результат дає **Re-transcribe через Google
-AI Studio** вже після запису. Жива транскрипція на мішанині мов слабша.
+For a bilingual conversation the most accurate result comes from
+**transcribing via Google AI Studio** after the recording. Live transcription
+handles mixed languages worse.
 
-## Приватність
+## Privacy
 
-- Аудіо надсилається **тільки** в той сервіс, ключ якого ви ввели (OpenAI або
-  Google), — виключно для розпізнавання мовлення.
-- Записи, транскрипти й ключі зберігаються **локально** на вашому комп’ютері.
-- Розробник застосунку **не отримує** ні ваших записів, ні ключів, ні
-  статистики. Тут немає ні акаунтів, ні телеметрії.
-- Пам’ятайте: у багатьох країнах і компаніях запис розмови вимагає **згоди
-  співрозмовників**. Попереджайте учасників зустрічі.
+- Audio is sent **only** to the service whose key you entered (OpenAI or
+  Google) — solely for speech recognition.
+- Recordings, transcripts and keys are stored **locally** on your computer.
+- The developer **receives** none of your recordings, keys or statistics.
+  There are no accounts and no telemetry.
+- Remember: in many countries and companies recording a conversation requires
+  **the consent of the other participants**. Tell them.
 
-## Часті питання
+## FAQ
 
 <details>
-<summary><b>Чому Windows/macOS лякає попередженням?</b></summary>
+<summary><b>Why does Windows/macOS show a scary warning?</b></summary>
 
-Бо застосунок не підписаний платним сертифікатом (Windows — від $200/рік,
-Apple — $99/рік). Це не про безпеку самого коду: попередження отримує будь-яка
-програма без такого сертифіката. Інструкції з обходу — вище.
+Because the app is not signed with a paid certificate (Windows — from $200 a
+year, Apple — $99 a year). This is not about the safety of the code itself:
+any program without such a certificate gets the same warning. Instructions to
+get past it are above.
 
-На macOS у вікні блокування є кнопка **«Перемістити в Смітник»** — вона синя й
-виглядає як основна дія. Не тисніть її: потрібна кнопка **«Готово»**, а далі
-дозвіл у Системних параметрах (крок 3 вище).
+On macOS the blocking dialog has a **“Move to Trash”** button — it is blue and
+looks like the primary action. Do not click it: you need **“Done”**, and then
+the permission in System Settings (step 3 above).
 </details>
 
 <details>
-<summary><b>Скільки коштує використання?</b></summary>
+<summary><b>How much does it cost?</b></summary>
 
-Сам застосунок безкоштовний. Ви платите лише за розпізнавання мовлення тому
-сервісу, чий ключ використовуєте. У Google AI Studio є безкоштовний ліміт,
-якого зазвичай вистачає для кількох зустрічей на день.
+The app itself is free. You only pay for speech recognition, to the service
+whose key you use. Google AI Studio has a free tier that usually covers a few
+meetings a day.
 </details>
 
 <details>
-<summary><b>Чи можна записати дзвінок у Zoom / Meet / Slack?</b></summary>
+<summary><b>Can I record a Zoom / Meet / Slack call?</b></summary>
 
-Так — застосунок пише системний звук, тому чути всіх учасників, незалежно від
-платформи. На macOS для цього потрібен дозвіл на запис екрана (див. вище).
+Yes — the app records system audio, so everyone is audible regardless of the
+platform. On macOS this needs the screen recording permission (see above).
 </details>
 
 <details>
-<summary><b>Де мої записи?</b></summary>
+<summary><b>Where are my recordings?</b></summary>
 
-Windows — тека `data` поруч із `.exe`. macOS — `Documents/ShrutiAI`.
-Кожен запис це окрема тека: аудіо + транскрипти у форматі Markdown.
+Windows — a `data` folder next to the `.exe`. macOS — `Documents/ShrutiAI`.
+Each recording is its own folder: audio plus transcripts in Markdown.
 </details>
 
 <details>
-<summary><b>Чи є версія для Android / iPhone?</b></summary>
+<summary><b>Is there a version for Android / iPhone?</b></summary>
 
-Android-версія існує, але поки роздається окремо і не тут. iOS немає.
+An Android version exists but is distributed separately, not here. There is
+no iOS version.
 </details>
 
 <details>
-<summary><b>Чи працює на Intel-маках?</b></summary>
+<summary><b>Does it work on Intel Macs?</b></summary>
 
-Поточні збірки — для Apple Silicon (M1 і новіші).
+Current builds are for Apple Silicon (M1 and newer).
 </details>
 
-## Підтримка
+## Support
 
-Знайшли помилку або є ідея — **[відкрийте issue](../../issues/new)**.
+Found a bug or have an idea — **[open an issue](../../issues/new)**.
 
-Так зручніше для всіх: відповідь бачать інші, у кого те саме питання, і нічого
-не губиться в пошті. Напишіть, будь ласка, три речі: **яка система** (Windows
-чи macOS), **яка версія** застосунку (видно внизу ліворуч) і **що саме
-сталось**.
+It works better for everyone: the answer is visible to others with the same
+question, and nothing gets lost in a mailbox. Please include three things:
+**which system** (Windows or macOS), **which version** of the app (shown in the
+bottom left) and **what exactly happened**.
 
-Не хочете писати публічно — контакти є у профілі
-[Simplaerai](https://github.com/simplaerai-sv).
+If you would rather not write publicly, contact details are on the
+[Simplaerai](https://github.com/simplaerai-sv) profile.
 
 ---
 
-© Simplaerai. Застосунок надається «як є», без гарантій.
+© Simplaerai. The app is provided “as is”, without warranties.
