@@ -45,8 +45,8 @@ is no server of ours involved.
 
 <img src="docs/01-main-window.png" alt="Main window" width="100%">
 
-The main window. The microphone buttons in the header — level keeping and mute —
-are available **at any time**, not only while recording.
+The main window. The microphone lives in the header: pick the device, watch the
+level, mute it or hold the gain — **at any time**, not only while recording.
 
 <img src="docs/05-new-recording.png" alt="New recording" width="100%">
 
