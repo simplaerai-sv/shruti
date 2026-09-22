@@ -30,6 +30,11 @@ is no server of ours involved.
 - 🔊 **Microphone level keeper** — Slack and Telegram lower your input gain and
   never raise it back; the app restores it. It works **always**, not only while
   recording, so calls and voice notes keep a high level too.
+- 💻 **Transcription on your own computer** — no key, no account, no network,
+  no cost. Uses a local Whisper model that the app downloads once (**1.5 GB**,
+  so it is not ready the moment you install). An hour-long meeting takes about
+  three minutes. Because the two channels are recognised separately, who said
+  what is **known rather than guessed**.
 - ⚡ **Live transcription** — text appears while you are talking (needs an
   OpenAI key; enabled in settings, off by default).
 - 📝 **High-quality transcript after recording** — split by speakers; long
@@ -135,20 +140,28 @@ so macOS blocks the first launch. This is normal and happens once.
    will not be heard.
 6. Recordings are kept in `Documents/ShrutiAI`.
 
-## First run: you need an API key
+## First run: choose how you transcribe
 
-The app does not transcribe by itself — it sends audio to the service you
-choose. **One** key is enough:
+**Recording works the moment you install the app.** Turning a recording into
+text needs one of two things — a cloud service, or a model on your own
+computer.
 
-| Service | Cost | What you get |
+| Option | What it costs | Worth knowing |
 |---|---|---|
+| **On this computer** | nothing, ever | The app downloads a **1.5 GB model once**. Until that download finishes there is no local transcription — installing the app is not enough on its own. Afterwards it works with **no network and no account**. |
 | **[Google AI Studio](https://aistudio.google.com/apikey)** | **has a free tier** — enough for a few meetings a day | Best for long recordings and bilingual conversations |
-| **[OpenAI](https://platform.openai.com/api-keys)** | paid, requires a card | Live transcription while recording |
+| **[OpenAI](https://platform.openai.com/api-keys)** | paid, requires a card | The only way to get **live** transcription and summaries |
 
-The key goes into **Settings** (the gear in the top right) and stays only on
-your computer.
+The local model lives in `data/models` next to the app, so a portable copy
+carries it along. The download is verified by size and checksum: an
+interrupted download never pretends to be a finished one.
 
-Not sure where to start — take Google AI Studio.
+A key, if you use one, goes into **Settings** (the gear in the top right) and
+stays only on your computer.
+
+Not sure where to start: if you can wait for a 1.5 GB download, take **On this
+computer** — nothing leaves your machine and nothing is ever charged. If you
+want a transcript in the next five minutes, take Google AI Studio.
 
 ## How to record a meeting
 
@@ -183,8 +196,10 @@ handles mixed languages worse.
 
 ## Privacy
 
-- Audio is sent **only** to the service whose key you entered (OpenAI or
-  Google) — solely for speech recognition.
+- With **On this computer, audio never leaves your machine** — recognition
+  happens locally and no network is involved.
+- If you chose a cloud service, audio is sent **only** to the one whose key you
+  entered (OpenAI or Google) — solely for speech recognition.
 - Recordings, transcripts and keys are stored **locally** on your computer.
 - The developer **receives** none of your recordings, keys or statistics.
   There are no accounts and no telemetry.
