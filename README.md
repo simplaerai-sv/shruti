@@ -34,7 +34,8 @@ is no server of ours involved.
   no cost. Uses a local Whisper model that the app downloads once (**1.5 GB**,
   so it is not ready the moment you install). An hour-long meeting takes about
   three minutes. Because the two channels are recognised separately, who said
-  what is **known rather than guessed**.
+  what is **known rather than guessed** — though in a group call everyone on
+  the other side is one speaker.
 - ⚡ **Live transcription** — text appears while you are talking (needs an
   OpenAI key; enabled in settings, off by default).
 - 📝 **High-quality transcript after recording** — split by speakers; long
